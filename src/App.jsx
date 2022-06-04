@@ -1,7 +1,6 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Aside from "./components/Aside";
-import Btn from "./components/Btn";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -15,7 +14,8 @@ const App = () => {
   const [pokemon, setPokemon] = useState([])
   const [pokeDex, setPokeDex] = useState([])
 
-  let getPokemons = async () => {
+
+  let getPokemons = useCallback( async() => {
     const {data} =  await axios.get(pokeURL)
     setPokeData(data)
 
@@ -29,7 +29,10 @@ const App = () => {
     .then((results) => {
       setPokemon(results.map((res) => res.data))
     })
-  }
+  },[pokeURL],
+
+
+  )
 
   const btnPrevPage = e => {
     e.preventDefault()
@@ -43,7 +46,7 @@ const App = () => {
 
 useEffect(() => {
   getPokemons()
-}, [pokeURL])
+}, [getPokemons])
 
   return (
     <div className="App">

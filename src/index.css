@@ -9,7 +9,7 @@ body {
   position: absolute;
   z-index: -100;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   background-size: cover;
   opacity: .9;
 }
@@ -40,6 +40,7 @@ body {
 
 .main {
   grid-area: main;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -70,14 +71,15 @@ body {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+  height: 40px;
 }
 
 .aside {
   grid-area: aside;
+  width: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid #000;
   margin-right: 5px;
 }
 
