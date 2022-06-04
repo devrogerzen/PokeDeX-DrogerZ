@@ -1,10 +1,10 @@
 # PoKeDEX DevRogerZen!
 
-Hola! Todos los programadores React.js que se respeten tienen una PoKEDeX, asi que... ** Esta es mi PoKeDEX! *
+Hola! Genios, sabias que!!! Todos los programadores React.js que se respeten tienen una PoKEDeX, asi que... ** Esta es mi PoKeDEX! **
 
 ## Link DEMO:
 
-## https://eclectic-mermaid-f0b105.netlify.app/
+## https://neon-faloodeh-49e6c9.netlify.app/
 
 ```mermaid
 graph LR
