@@ -76,6 +76,12 @@ body {
   grid-area: aside;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border: 4px solid #000;
+}
+
+.img_pokeinfo {
+  height: 200px;
 }
 
 .footer {

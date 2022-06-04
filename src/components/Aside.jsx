@@ -1,15 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Aside = () => {
+const Aside = ({ data }) => {
+  console.log(data)
   return (
     <aside className="aside">
-        <section>
-          <article>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ullam similique aliquam voluptatibus iure. Dolore ratione voluptatem fugiat eius nemo pariatur quis a numquam! Temporibus tempora quam mollitia praesentium esse.
-          </article>
-        </section>
-      </aside>
-  )
-}
+      <h1>POKEMON</h1>
+      <br />
+      <img className="img_pokeinfo"
+      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`} alt="" />
+      <h2>{data.name}</h2>
+    </aside>
+  );
+};
 
-export default Aside
+export default Aside;

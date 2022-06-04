@@ -13,11 +13,11 @@ const App = () => {
   const [pokeURL, setPokeURL] = useState("https://pokeapi.co/api/v2/pokemon/")
   const [pokeData, setPokeData] = useState([])
   const [pokemon, setPokemon] = useState([])
+  const [pokeDex, setPokeDex] = useState([])
 
   let getPokemons = async () => {
     const {data} =  await axios.get(pokeURL)
     setPokeData(data)
-    console.log(pokeData)
 
     axios.get(pokeURL)
     .then((res) => {
@@ -29,7 +29,6 @@ const App = () => {
     .then((results) => {
       setPokemon(results.map((res) => res.data))
     })
-   
   }
 
   const btnPrevPage = e => {
@@ -50,12 +49,12 @@ useEffect(() => {
     <div className="App">
       <img className="bg_App" src={BgAgua} alt="Background of Water or Land" />
       <Header />
-      <Main pokemons={pokemon}/>
+      <Main pokemons={pokemon} infoPokemon={poke => setPokeDex(poke)}/>
       <div className='btn'>
       <button onClick={btnPrevPage}>Previuos</button>
       <button onClick={btnNextPage}>Next</button>
     </div>
-      <Aside />
+      <Aside data={pokeDex}/>
       <Footer />
     </div>
   );
