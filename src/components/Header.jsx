@@ -1,5 +1,5 @@
 import React from "react";
-import PokeAPI from "../images/pokeapi.png";
+import PokeAPI from "../images/pokeapi.png"
 
 const Header = () => {
   return (

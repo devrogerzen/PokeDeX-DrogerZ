@@ -1,16 +1,17 @@
-import React from "react";
+import React from "react"
 
 const Aside = ({ data }) => {
   console.log(data)
+
   return (
     <aside className="aside">
       <h1>POKEMON</h1>
       <img
         className="img_pokeinfo"
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-          !data.id ? "25" : data.id
+          !data.id ? "57" : data.id
         }.png`}
-        alt=""
+        alt={`Pokemon seleccionarado es ${data.name} `}
       />
       <h2>{data.name}</h2>
       {!data.stats ? (
